@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" fill="none">
+  <rect width="1200" height="900" fill="#EEF3F8" />
+  <rect y="660" width="1200" height="240" fill="#D7DEE8" />
+  <rect x="120" y="258" width="398" height="274" rx="34" fill="#1E293B" />
+  <rect x="558" y="218" width="522" height="314" rx="38" fill="#0F172A" />
+  <rect x="120" y="258" width="398" height="42" rx="21" fill="#D1911D" />
+  <rect x="558" y="218" width="522" height="42" rx="21" fill="#D1911D" />
+  <rect x="176" y="328" width="126" height="96" rx="18" fill="#E2E8F0" />
+  <rect x="336" y="328" width="126" height="96" rx="18" fill="#E2E8F0" />
+  <rect x="626" y="302" width="146" height="108" rx="18" fill="#E2E8F0" />
+  <rect x="808" y="302" width="146" height="108" rx="18" fill="#E2E8F0" />
+  <rect x="990" y="302" width="42" height="184" rx="18" fill="#1E293B" />
+  <path d="M160 590H1040" stroke="#0F172A" stroke-width="20" stroke-linecap="round" />
+  <rect x="206" y="532" width="52" height="114" rx="16" fill="#64748B" />
+  <rect x="404" y="532" width="52" height="114" rx="16" fill="#64748B" />
+  <rect x="672" y="532" width="52" height="114" rx="16" fill="#64748B" />
+  <rect x="918" y="532" width="52" height="114" rx="16" fill="#64748B" />
+  <text x="120" y="790" fill="#0F172A" font-family="Arial, sans-serif" font-size="62" font-weight="700">
+    CAMPAMENTOS
+  </text>
+  <text x="120" y="840" fill="#475569" font-family="Arial, sans-serif" font-size="30">
+    Infraestructura modular para permanencia y apoyo operativo.
+  </text>
+</svg>

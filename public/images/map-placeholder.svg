@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" fill="none">
+  <rect width="1200" height="800" fill="#EEF2F6" />
+  <path d="M0 154L1200 154" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="10 12" />
+  <path d="M0 322L1200 322" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="10 12" />
+  <path d="M0 490L1200 490" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="10 12" />
+  <path d="M0 658L1200 658" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="10 12" />
+  <path d="M164 0L164 800" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="10 12" />
+  <path d="M412 0L412 800" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="10 12" />
+  <path d="M660 0L660 800" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="10 12" />
+  <path d="M908 0L908 800" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="10 12" />
+  <path d="M1096 0L1096 800" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="10 12" />
+  <path d="M214 622C214 520.403 296.403 438 398 438H810C911.597 438 994 520.403 994 622V800H214V622Z" fill="#DDE5EE" />
+  <path d="M600 182C526.68 182 468 240.68 468 314C468 404 600 538 600 538C600 538 732 404 732 314C732 240.68 673.32 182 600 182Z" fill="#D1911D" />
+  <circle cx="600" cy="314" r="58" fill="#FFF7E6" />
+  <circle cx="600" cy="314" r="28" fill="#0F172A" />
+  <text x="120" y="120" fill="#0F172A" font-family="Arial, sans-serif" font-size="58" font-weight="700">
+    CENOZ | MONTEVIDEO 849
+  </text>
+  <text x="120" y="176" fill="#475569" font-family="Arial, sans-serif" font-size="28">
+    Bahía Blanca, B8000KFQ. Referencia visual para futura integración con Google Maps.
+  </text>
+</svg>

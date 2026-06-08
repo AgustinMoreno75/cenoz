@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" fill="none">
+  <rect width="1200" height="900" fill="#EDF2F7" />
+  <rect y="650" width="1200" height="250" fill="#D5DEE8" />
+  <rect x="116" y="220" width="970" height="380" rx="40" fill="#1E293B" />
+  <rect x="116" y="220" width="970" height="54" rx="27" fill="#D1911D" />
+  <rect x="182" y="302" width="214" height="146" rx="24" fill="#E2E8F0" />
+  <rect x="438" y="302" width="214" height="146" rx="24" fill="#E2E8F0" />
+  <rect x="694" y="302" width="214" height="146" rx="24" fill="#E2E8F0" />
+  <rect x="950" y="302" width="68" height="244" rx="20" fill="#0F172A" />
+  <path d="M210 694H962" stroke="#0F172A" stroke-width="22" stroke-linecap="round" />
+  <rect x="214" y="600" width="56" height="96" rx="18" fill="#64748B" />
+  <rect x="892" y="600" width="56" height="96" rx="18" fill="#64748B" />
+  <path d="M984 372H988" stroke="#E2E8F0" stroke-width="14" stroke-linecap="round" />
+  <text x="120" y="782" fill="#0F172A" font-family="Arial, sans-serif" font-size="62" font-weight="700">
+    MÓDULOS PORTÁTILES
+  </text>
+  <text x="120" y="832" fill="#475569" font-family="Arial, sans-serif" font-size="30">
+    Espacios funcionales para administración, apoyo y operación en terreno.
+  </text>
+</svg>
