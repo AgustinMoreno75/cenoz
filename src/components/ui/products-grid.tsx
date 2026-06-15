@@ -22,8 +22,8 @@ export function ProductsGrid({ products }: ProductsGridProps) {
 
   return (
     <div className="space-y-8">
-      <div className="-mx-4 overflow-x-auto px-4 pb-2 sm:mx-0 sm:px-0">
-        <div className="flex min-w-max gap-3 sm:min-w-0 sm:flex-wrap">
+      <div className="pb-2">
+        <div className="flex flex-wrap gap-3">
         {productFilterOptions.map((option) => (
           <button
             key={option.value}

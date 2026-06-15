@@ -13,9 +13,17 @@ export type ContactNumber = {
 export type ProductCategory =
   | "sanitarios"
   | "modulos"
-  | "atmosfericos";
+  | "atmosfericos"
+  | "especiales";
 
 export type ProductFilter = ProductCategory | "todos";
+
+export type ProductAvailability = "Alta" | "Media" | "Baja";
+
+export type ProductImage = {
+  src: string;
+  alt: string;
+};
 
 export type Product = {
   slug: string;
@@ -27,6 +35,9 @@ export type Product = {
   seoDescription: string;
   image: string;
   imageAlt: string;
+  galleryImages?: ProductImage[];
+  technicalSpecifications?: string[];
+  availability?: ProductAvailability;
   features: string[];
   applications: string[];
 };
@@ -41,7 +52,7 @@ export const siteConfig = {
   brandLabel: "Soluciones modulares, sanitarias y operativas",
   defaultTitle: "CENOZ | Módulos portátiles, baños químicos y equipos atmosféricos",
   description:
-    "Módulos portátiles, baños químicos y equipos atmosféricos para empresas, obras, municipios y operaciones desde Bahía Blanca.",
+    "Soluciones modulares industriales desde Bahía Blanca a toda la República Argentina, con venta y alquiler de módulos portátiles, baños químicos y equipos atmosféricos.",
   siteUrl: "https://cenoz.com",
   email: "cenoz@cenoz.com",
   whatsappNumber: "2916436899",
@@ -71,7 +82,7 @@ export const siteConfig = {
     latitude: -38.7196,
     longitude: -62.2724,
   },
-  coverageZones: ["Bahía Blanca"],
+  coverageZones: ["Toda la República Argentina"],
   hours: [] as string[],
   defaultKeywords: [
     "módulos portátiles",
@@ -87,6 +98,7 @@ export const siteConfig = {
     "alquiler de módulos",
     "alquiler de baños químicos",
     "Bahía Blanca",
+    "República Argentina",
   ],
 } as const;
 
@@ -167,7 +179,7 @@ export const products: Product[] = [
     description:
       "Solución móvil orientada a empresas que necesitan soporte petrolero, presencia operativa y una estructura lista para responder en obra o campo.",
     seoDescription:
-      "Trailers petroleros de 12 mts en Bahía Blanca para operaciones petroleras, industriales y de apoyo en campo.",
+      "Trailers petroleros de 12 mts desde Bahía Blanca a toda la República Argentina para operaciones petroleras, industriales y de apoyo en campo.",
     image: "/images/trailer-petrolero-1.jpg",
     imageAlt: "Trailer petrolero industrial sobre ruta",
     features: [
@@ -191,7 +203,7 @@ export const products: Product[] = [
     description:
       "Solución móvil orientada a empresas que necesitan soporte petrolero, presencia operativa y una estructura lista para responder en obra o campo.",
     seoDescription:
-      "Trailer petrolero tradicional de 12 mts en Bahía Blanca para operaciones petroleras, industriales y de apoyo en campo.",
+      "Trailer petrolero tradicional de 12 mts desde Bahía Blanca a toda la República Argentina para operaciones petroleras, industriales y de apoyo en campo.",
     image: "/images/trailer-petrolero-tradicional.jpg",
     imageAlt: "Trailer petrolero tradicional blanco en traslado dentro de un predio operativo",
     features: [
@@ -215,7 +227,7 @@ export const products: Product[] = [
     description:
       "La línea que CENOZ quiere destacar: módulos habitacionales de 6 mts pensados para empresas y obras que necesitan resolver rápido, claro y sin fricción.",
     seoDescription:
-      "Módulos portátiles habitacionales de 6 mts en Bahía Blanca para obras, empresas y bases operativas.",
+      "Módulos portátiles habitacionales de 6 mts desde Bahía Blanca a toda la República Argentina para obras, empresas y bases operativas.",
     image: "/images/modulo-portatil.jpg",
     imageAlt: "Módulos portátiles habitacionales y oficinas de obra en contenedores",
     features: [
@@ -239,7 +251,7 @@ export const products: Product[] = [
     description:
       "La línea que CENOZ quiere destacar: módulos habitacionales de 6 mts pensados para empresas y obras que necesitan resolver rápido, claro y sin fricción.",
     seoDescription:
-      "Módulos habitacionales tradicionales de 6 mts en Bahía Blanca para obras, empresas y bases operativas.",
+      "Módulos habitacionales tradicionales de 6 mts desde Bahía Blanca a toda la República Argentina para obras, empresas y bases operativas.",
     image: "/images/ModuloHabitacionalTradicional.jpg",
     imageAlt: "Módulo habitacional tradicional blanco en un predio operativo",
     features: [
@@ -263,7 +275,7 @@ export const products: Product[] = [
     description:
       "Módulos con kit rodante pensados para empresas y obras que necesitan una solución habitable móvil, clara y lista para operar sin fricción.",
     seoDescription:
-      "Módulos con kit rodante de 6 mts en Bahía Blanca para obras, empresas y bases operativas con traslado práctico.",
+      "Módulos con kit rodante de 6 mts desde Bahía Blanca a toda la República Argentina para obras, empresas y bases operativas con traslado práctico.",
     image: "/images/modulo-rodante.jpg",
     imageAlt: "Módulos blancos con kit rodante en un predio operativo",
     features: [
@@ -287,7 +299,7 @@ export const products: Product[] = [
     description:
       "Línea sanitaria con modelos tradicionales, autoservice, cloacales y adaptados para personas con discapacidad, pensada para obras, empresas y operativos que necesitan resolver higiene con practicidad.",
     seoDescription:
-      "Baños químicos y cloacales en Bahía Blanca para obras, empresas y operativos, con modelos tradicionales, autoservice y adaptados.",
+      "Baños químicos y cloacales desde Bahía Blanca a toda la República Argentina para obras, empresas y operativos, con modelos tradicionales, autoservice y adaptados.",
     image: "/images/banos-portatiles.jpg",
     imageAlt: "Baños portátiles blancos exhibidos en un galpón",
     features: [
@@ -311,7 +323,7 @@ export const products: Product[] = [
     description:
       "Cabinas pensadas para control de acceso, vigilancia y presencia operativa en empresas, predios, obras y puntos de ingreso donde hace falta claridad y resguardo.",
     seoDescription:
-      "Cabinas de vigilancia en Bahía Blanca en medidas de 1.30 a 6 mts para control de acceso y seguridad operativa.",
+      "Cabinas de vigilancia desde Bahía Blanca a toda la República Argentina en medidas de 1.30 a 6 mts para control de acceso y seguridad operativa.",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Guard_booth_20190426_135110.jpg/1280px-Guard_booth_20190426_135110.jpg",
     imageAlt: "Cabina de vigilancia en un predio industrial",
     features: [
@@ -335,7 +347,7 @@ export const products: Product[] = [
     description:
       "Línea sanitaria orientada a obras, empresas, municipios y eventos que necesitan resolver higiene con rapidez, claridad y buena disponibilidad.",
     seoDescription:
-      "Baños químicos en Bahía Blanca para obras, empresas, municipios y eventos, con modelos tradicionales, autoservice y adaptados.",
+      "Baños químicos desde Bahía Blanca a toda la República Argentina para obras, empresas, municipios y eventos, con modelos tradicionales, autoservice y adaptados.",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/WTB_Portable_toilets_1.jpg/1280px-WTB_Portable_toilets_1.jpg",
     imageAlt: "Fila de baños químicos portátiles en un evento",
     features: [
@@ -359,7 +371,7 @@ export const products: Product[] = [
     description:
       "Equipos atmosféricos orientados a resolver necesidades de saneamiento y apoyo operativo con una respuesta concreta para empresas, obras y servicios especiales.",
     seoDescription:
-      "Equipos atmosféricos en Bahía Blanca para saneamiento, apoyo operativo y necesidades técnicas específicas.",
+      "Equipos atmosféricos desde Bahía Blanca a toda la República Argentina para saneamiento, apoyo operativo y necesidades técnicas específicas.",
     image: "/images/equipo-atmosferico.jpg",
     imageAlt: "Equipo atmosférico portátil con mangueras amarillas frente a un galpón",
     features: [
@@ -377,13 +389,13 @@ export const products: Product[] = [
     slug: "productos-a-medida",
     title: "Productos a medida",
     badge: "Proyecto personalizado",
-    category: "modulos",
+    category: "especiales",
     shortDescription:
       "Productos personalizados desarrollados a medida según la necesidad real de cada cliente.",
     description:
       "Productos a medida pensados para empresas, industria y operaciones que necesitan una solución personalizada, fabricada según espacio, uso y requerimientos concretos.",
     seoDescription:
-      "Productos a medida en Bahía Blanca con módulos personalizados para empresas, industria y operaciones con requerimientos específicos.",
+      "Productos a medida desde Bahía Blanca a toda la República Argentina con módulos personalizados para empresas, industria y operaciones con requerimientos específicos.",
     image: "/images/proyectos-a-medida.jpg",
     imageAlt: "Módulo personalizado fabricado por CENOZ para una operación industrial",
     features: [
@@ -400,16 +412,18 @@ export const products: Product[] = [
 ];
 
 export const productCategoryLabels: Record<ProductCategory, string> = {
-  modulos: "Módulos portátiles",
-  sanitarios: "Sanitarios",
+  modulos: "Módulos Portátiles",
+  sanitarios: "Baños Químicos",
   atmosfericos: "Equipos atmosféricos",
+  especiales: "Proyectos Especiales / Productos a Medida",
 };
 
 export const productFilterOptions: Array<{ value: ProductFilter; label: string }> = [
   { value: "todos", label: "Todos" },
-  { value: "modulos", label: "Módulos portátiles" },
-  { value: "sanitarios", label: "Sanitarios" },
+  { value: "modulos", label: "Módulos Portátiles" },
+  { value: "sanitarios", label: "Baños Químicos" },
   { value: "atmosfericos", label: "Equipos atmosféricos" },
+  { value: "especiales", label: "Proyectos Especiales / Productos a Medida" },
 ];
 
 export const galleryItems = [
@@ -487,9 +501,9 @@ export const workflowSteps = [
       "Sugerimos la alternativa más conveniente según empresa, obra, municipio o evento.",
   },
   {
-    title: "Propuesta comercial",
+    title: "Solicitud de presupuesto",
     description:
-      "Armamos una respuesta directa sin precios públicos, enfocada en la necesidad real del cliente.",
+      "Preparamos una respuesta comercial directa sin precios públicos, enfocada en la necesidad real del cliente.",
   },
   {
     title: "Coordinación",

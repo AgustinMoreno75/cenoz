@@ -93,7 +93,7 @@ export default function Home() {
       <JsonLd data={localBusinessSchema} />
       <JsonLd data={faqSchema} />
 
-      <section id="top" data-nav-section="/" className="relative isolate overflow-hidden bg-slate-950 text-white">
+      <section id="top" data-nav-section="/" className="relative isolate overflow-hidden bg-[var(--color-surface)] text-slate-950">
         <div className="absolute inset-0 -z-20">
           <Image
             src="/images/trailer-petrolero-tradicional.jpg"
@@ -103,21 +103,23 @@ export default function Home() {
             className="object-cover object-center"
             sizes="100vw"
           />
-          <div className="hero-overlay absolute inset-0" />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.58)_0%,rgba(255,255,255,0.76)_18%,rgba(248,250,252,0.92)_45%,rgba(248,250,252,0.98)_100%)]" />
         </div>
 
         <Container className="relative grid min-h-[88vh] items-end gap-10 pb-14 pt-28 sm:pb-20 sm:pt-32 lg:grid-cols-[1.15fr_.85fr] lg:gap-12 lg:pt-36">
           <Reveal className="max-w-3xl space-y-8">
-            <div className="space-y-5">
-              <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur-sm">
-                Bahía Blanca • módulos portátiles, baños químicos y equipos atmosféricos
+            <div className="space-y-5 text-center sm:text-left">
+              <span className="inline-flex rounded-full border border-slate-900/10 bg-white/82 px-4 py-2 text-sm font-medium text-slate-700 backdrop-blur-sm">
+                Más de 30 años • Bahía Blanca • toda la República Argentina
               </span>
-              <h1 className="text-balance text-3xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
-                Somos la solución en módulos portátiles con entrega inmediata
+              <h1 className="hidden text-balance text-4xl font-semibold tracking-tight text-slate-950 sm:block sm:text-5xl lg:text-6xl">
+                Cenoz
               </h1>
-              <p className="max-w-2xl text-base leading-7 text-slate-200 sm:text-xl sm:leading-8">
-                CENOZ se especializa en la venta y alquiler de módulos portátiles, baños químicos y
-                equipos atmosféricos, con más de 32 años de experiencia en el mercado, brindando soluciones rápidas en todo el país.
+              <p className="max-w-3xl text-balance text-xl font-medium leading-8 text-slate-900 sm:text-3xl sm:leading-10">
+                Soluciones Modulares Industriales pensadas desde Bahía Blanca a toda la República Argentina
+              </p>
+              <p className="max-w-2xl text-base leading-7 text-[var(--color-muted)] sm:text-xl sm:leading-8">
+                Alquiler y Venta de Módulos Portátiles, Baños Químicos y Equipos Atmosféricos
               </p>
             </div>
 
@@ -133,7 +135,7 @@ export default function Home() {
               </a>
               <Link
                 href="/productos"
-                className="inline-flex w-full items-center justify-center rounded-full border border-white/15 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/15 sm:w-auto"
+                className="inline-flex w-full items-center justify-center rounded-full border border-slate-900/10 bg-white/90 px-5 py-3 text-sm font-semibold text-slate-900 transition hover:-translate-y-0.5 hover:bg-white sm:w-auto"
               >
                 Ver productos
               </Link>
@@ -143,12 +145,12 @@ export default function Home() {
               {heroStats.map((item) => (
                 <div
                   key={item.label}
-                  className="min-w-0 rounded-[24px] border border-white/10 bg-white/8 p-5 backdrop-blur-sm"
+                  className="min-w-0 rounded-[24px] border border-slate-900/8 bg-white/88 p-5 shadow-[0_18px_40px_rgba(15,23,42,0.08)] backdrop-blur-sm"
                 >
-                  <p className="text-2xl font-semibold leading-tight tracking-tight text-white sm:text-[1.75rem] xl:text-3xl">
+                  <p className="text-2xl font-semibold leading-tight tracking-tight text-slate-950 sm:text-[1.75rem] xl:text-3xl">
                     {item.value}
                   </p>
-                  <p className="mt-2 text-sm text-slate-200">{item.label}</p>
+                  <p className="mt-2 text-sm text-[var(--color-muted)]">{item.label}</p>
                 </div>
               ))}
             </div>
@@ -161,38 +163,38 @@ export default function Home() {
                   Respuesta comercial directa
                 </p>
                 <h2 className="text-2xl font-semibold tracking-tight text-slate-950">
-                  Consultá por la línea que necesitás y recibí una propuesta directa.
+                  Consultá por la línea que necesitás y solicitá presupuesto.
                 </h2>
               </div>
 
               <div className="space-y-4 rounded-[28px] bg-[var(--color-surface)] p-5">
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-accent-strong)]">
-                    Qué resolvemos
+                    Canales de Contacto
                   </p>
                   <p className="mt-2 text-sm leading-7 text-[var(--color-muted)]">
-                    módulos portátiles, baños químicos y equipos atmosféricos con
-                    atención comercial directa y rapida 
+                    Elegí el canal más conveniente para consultar, solicitar presupuesto
+                    y enviar los datos de tu empresa.
                   </p>
                 </div>
 
                 <ul className="grid gap-3 text-sm text-slate-700 sm:grid-cols-2">
                   <li className="rounded-2xl bg-white px-4 py-3">WhatsApp: {siteConfig.whatsappDisplay}</li>
                   <li className="rounded-2xl bg-white px-4 py-3">Email: {siteConfig.email}</li>
-                  <li className="rounded-2xl bg-white px-4 py-3">Formulario web con datos de empresa y CUIT</li>
-                  <li className="rounded-2xl bg-white px-4 py-3">Propuesta ajustada al producto, formato y uso real</li>
+                  <li className="rounded-2xl bg-white px-4 py-3">Dirección Postal: {siteConfig.addressLine}</li>
+                  <li className="rounded-2xl bg-white px-4 py-3">Formulario Web con datos de empresa y CUIT</li>
                 </ul>
               </div>
 
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                 <a
-                  href={buildWhatsAppLink("Hola CENOZ, quiero recibir una propuesta comercial.")}
+                  href={buildWhatsAppLink("Hola CENOZ, quiero solicitar presupuesto.")}
                   target="_blank"
                   rel="noreferrer"
                   className={cn(buttonStyles.whatsapp, "w-full justify-center sm:w-auto")}
                 >
                   <WhatsAppLogo className="h-4 w-4" />
-                  Solicitar propuesta
+                  Solicitar Presupuesto
                 </a>
                 <Link href="/contacto" className={cn(buttonStyles.secondary, "w-full justify-center sm:w-auto")}>
                   Ir al formulario
@@ -215,7 +217,7 @@ export default function Home() {
             <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
               {homeProducts.map((product, index) => (
                 <Reveal key={product.slug} delay={index * 0.06}>
-                  <ProductCard product={product} />
+                  <ProductCard product={product} variant="home" />
                 </Reveal>
               ))}
             </div>
@@ -248,9 +250,9 @@ export default function Home() {
         <section className="border-y border-[color:var(--color-line)] bg-[var(--color-surface)] py-20 sm:py-24">
           <Container className="space-y-10">
             <SectionHeading
-              eyebrow="Qué prioriza CENOZ"
-              title="Soluciones, conveniencia y experiencia como base de la decisión"
-              description="Los tres conceptos que el cliente quiere ver reflejados en la nueva etapa de la marca, en ese mismo orden de prioridad."
+              eyebrow="Propuesta de valor"
+              title="BRINDAMOS SOLUCIONES en MODULOS PORTATILES de CALIDAD para la industria."
+              description="EXPERIENCIA y CONVENIENCIA avaladas por la CONFORMIDAD y ELECCION de nuestros clientes, por la PRESENCIA, SERIEDAD y CONTINUIDAD en el mercado y por la AGILIDAD en la respuesta y resolución eficaz con ENTREGA INMEDIATA en cualquier lugar del país."
             />
 
             <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -288,19 +290,19 @@ export default function Home() {
               Una empresa enfocada en resolver con criterio comercial y respuesta directa.
             </h2>
             <p className="max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-              CENOZ trabaja con una propuesta concreta para empresas, constructoras,
-              municipios y eventos que necesitan módulos portátiles, baños químicos o
-              equipos atmosféricos sin perder tiempo en vueltas innecesarias.
+              Desde hace más de 3 décadas nos dedicamos a la Venta y Alquiler de Módulos
+              Portátiles, Baños Químicos y Equipos Atmosféricos brindando respuesta inmediata
+              a necesidades urgentes de nuestros clientes en todo el país.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Link href="/nosotros" className={cn(buttonStyles.primary, "w-full justify-center sm:w-auto")}>
-                Conocer la empresa
+              <Link href="/#contacto" className={cn(buttonStyles.primary, "w-full justify-center sm:w-auto")}>
+                Contactar Empresa
               </Link>
               <Link
-                href="/contacto"
+                href="/nosotros"
                 className="inline-flex w-full items-center justify-center rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10 sm:w-auto"
               >
-                Hablemos de tu proyecto
+                Conocer la empresa
               </Link>
             </div>
           </Reveal>
@@ -316,7 +318,7 @@ export default function Home() {
         </Container>
       </section>
 
-      <div data-nav-section="/contacto">
+      <div id="contacto" data-nav-section="/contacto">
         <section className="py-20 sm:py-24">
           <Container>
             <Reveal className="overflow-hidden rounded-[36px] bg-[linear-gradient(135deg,#111827,#1f2937)] px-6 py-10 text-white shadow-[0_24px_70px_rgba(15,23,42,0.16)] sm:px-8 lg:px-12 lg:py-14">
@@ -326,7 +328,7 @@ export default function Home() {
                     Consultas directas
                   </p>
                   <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
-                    No mostramos precios: armamos una propuesta según tu necesidad real
+                    No mostramos precios: armamos un presupuesto según tu necesidad real
                   </h2>
                   <p className="max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
                     Las consultas más habituales llegan por alquiler de módulos y baños para

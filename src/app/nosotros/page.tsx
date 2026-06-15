@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import { JsonLd } from "@/components/seo/json-ld";
@@ -9,7 +8,6 @@ import { WhatsAppLogo } from "@/components/ui/whatsapp-logo";
 import {
   buildWhatsAppLink,
   companyStats,
-  demoMedia,
   siteConfig,
   workflowSteps,
 } from "@/data/site";
@@ -19,9 +17,9 @@ import { buttonStyles } from "@/lib/theme";
 export const metadata = createPageMetadata({
   title: "Nosotros",
   description:
-    "Conocé a CENOZ, empresa enfocada en módulos portátiles, baños químicos y equipos atmosféricos con atención comercial desde Bahía Blanca.",
+    "Conocé a CENOZ, empresa enfocada en módulos portátiles, baños químicos y equipos atmosféricos desde Bahía Blanca a toda la República Argentina.",
   path: "/nosotros",
-  keywords: ["nosotros CENOZ", "soluciones industriales", "Bahía Blanca"],
+  keywords: ["nosotros CENOZ", "soluciones industriales", "República Argentina"],
 });
 
 const aboutSchema = {
@@ -46,7 +44,7 @@ const pillars = [
   {
     title: "Conveniencia",
     description:
-      "Canales de contacto ágiles y una propuesta comercial clara, sin precios públicos ni vueltas innecesarias.",
+      "Canales de contacto ágiles y una respuesta comercial clara, sin precios públicos ni vueltas innecesarias.",
   },
   {
     title: "Experiencia",
@@ -63,7 +61,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="Nosotros"
         title="Soluciones claras, conveniencia comercial y experiencia aplicada a la operación real"
-        description="CENOZ desarrolla su propuesta alrededor de tres ideas que hoy ordenan la marca: soluciones, conveniencia y experiencia, con foco en empresas y obras."
+        description="CENOZ desarrolla su posicionamiento alrededor de tres ideas que hoy ordenan la marca: soluciones, conveniencia y experiencia, con foco en empresas y obras."
         highlights={[
           "Soluciones",
           "Conveniencia",
@@ -72,20 +70,8 @@ export default function AboutPage() {
       />
 
       <section className="py-20 sm:py-24">
-        <Container className="grid gap-8 lg:grid-cols-[1.05fr_.95fr] lg:items-center">
-          <Reveal className="panel overflow-hidden rounded-[32px] p-3">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-[26px]">
-              <Image
-                src={demoMedia.about.src}
-                alt={demoMedia.about.alt}
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-          </Reveal>
-
-          <Reveal delay={0.06} className="space-y-6">
+        <Container className="max-w-4xl">
+          <Reveal className="space-y-6">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--color-steel)]">
                 Misión
@@ -183,12 +169,12 @@ export default function AboutPage() {
               Cobertura y enfoque
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950">
-              Atención comercial desde Bahía Blanca para empresas, constructoras, municipios y eventos
+              Atención comercial desde Bahía Blanca a toda la República Argentina
             </h2>
             <p className="mt-4 text-base leading-8 text-[var(--color-muted)]">
               La empresa opera desde Montevideo 849, Bahía Blanca. Ese anclaje real se
               combina con WhatsApp, formulario web, email y llamada para facilitar el contacto
-              y transmitir una imagen profesional y actualizada.
+              y responder con agilidad en cualquier lugar del país.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">

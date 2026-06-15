@@ -36,7 +36,7 @@ export function SiteFooter() {
 
           <p className="max-w-md text-sm leading-7 text-slate-400">
             Módulos portátiles, baños químicos y equipos atmosféricos para empresas,
-            obras, municipios y operaciones desde Bahía Blanca.
+            obras, municipios y operaciones desde Bahía Blanca a toda la República Argentina.
           </p>
 
           <a
@@ -110,7 +110,7 @@ export function SiteFooter() {
       <div className="border-t border-white/8 py-6">
         <Container className="flex flex-col gap-3 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} CENOZ. Todos los derechos reservados.</p>
-          <p>Bahía Blanca • Buenos Aires • Argentina</p>
+          <p>Bahía Blanca • Cobertura en toda la República Argentina</p>
         </Container>
       </div>
     </footer>

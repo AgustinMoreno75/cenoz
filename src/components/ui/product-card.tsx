@@ -1,23 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Building2, Toilet, Truck } from "lucide-react";
+import { Boxes, Building2, Toilet, Truck } from "lucide-react";
 
 import type { Product } from "@/data/site";
 import { productCategoryLabels } from "@/data/site";
+import { cn } from "@/lib/utils";
 
 type ProductCardProps = {
   product: Product;
+  variant?: "default" | "home";
 };
 
 const categoryIcons = {
   sanitarios: Toilet,
   modulos: Building2,
   atmosfericos: Truck,
+  especiales: Boxes,
 };
 
-export function ProductCard({ product }: ProductCardProps) {
+export function ProductCard({ product, variant = "default" }: ProductCardProps) {
   const Icon = categoryIcons[product.category];
   const productHref = `/productos/${product.slug}`;
+  const isHomeCard = variant === "home";
 
   return (
     <article className="panel h-full rounded-[30px] p-3">
@@ -43,29 +47,38 @@ export function ProductCard({ product }: ProductCardProps) {
       </Link>
 
       <div className="p-4 sm:p-5">
-        <p className="text-sm font-medium text-[var(--color-steel)]">
-          {productCategoryLabels[product.category]}
-        </p>
-        <h3 className="mt-3 text-2xl font-semibold tracking-tight text-slate-950">
+        <h3 className={cn("text-2xl font-semibold tracking-tight text-slate-950", isHomeCard ? "text-center" : "mt-3")}>
           {product.title}
         </h3>
-        <p className="mt-3 text-sm leading-7 text-[var(--color-muted)]">
-          {product.shortDescription}
-        </p>
 
-        <ul className="mt-5 space-y-2 text-sm leading-7 text-slate-700">
-          {product.features.slice(0, 3).map((feature) => (
-            <li key={feature}>• {feature}</li>
-          ))}
-        </ul>
+        {isHomeCard ? null : (
+          <>
+            <p className="mt-1 text-sm font-medium text-[var(--color-steel)]">
+              {productCategoryLabels[product.category]}
+            </p>
+            <p className="mt-3 text-sm leading-7 text-[var(--color-muted)]">
+              {product.shortDescription}
+            </p>
+
+            <ul className="mt-5 space-y-2 text-sm leading-7 text-slate-700">
+              {product.features.slice(0, 3).map((feature) => (
+                <li key={feature}>• {feature}</li>
+              ))}
+            </ul>
+          </>
+        )}
 
         <div className="mt-6">
           <Link
             href={productHref}
-            className="group inline-flex items-center justify-center gap-2 text-sm font-semibold text-[var(--color-steel)] transition-all duration-200 hover:text-[var(--color-accent-strong)] hover:[text-shadow:0_0_12px_rgba(252,62,48,0.32)] sm:justify-start"
+            className={cn(
+              "inline-flex text-sm font-semibold transition-all duration-200",
+              isHomeCard
+                ? "w-full items-center justify-center rounded-full border border-slate-900/10 bg-white px-5 py-3.5 text-slate-900 hover:-translate-y-0.5 hover:border-[var(--color-accent)] hover:text-[var(--color-accent-strong)] hover:shadow-[0_16px_36px_rgba(15,23,42,0.12)]"
+                : "items-center justify-center text-[var(--color-steel)] hover:text-[var(--color-accent-strong)] hover:[text-shadow:0_0_12px_rgba(252,62,48,0.32)] sm:justify-start",
+            )}
           >
-            Ver info
-            <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+            {isHomeCard ? "Más Información" : "Ver info"}
           </Link>
         </div>
       </div>

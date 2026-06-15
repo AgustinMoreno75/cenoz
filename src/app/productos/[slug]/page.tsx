@@ -64,11 +64,18 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
     ...products.filter((item) => item.slug !== product.slug && item.category !== product.category),
   ].slice(0, 3);
 
-  const productGalleryImages = Array.from({ length: 4 }, (_, index) => ({
-    id: `${product.slug}-image-${index + 1}`,
-    src: product.image,
-    alt: index === 0 ? product.imageAlt : `${product.title} - vista ${index + 1}`,
-  }));
+  const productGalleryImages = [
+    {
+      id: `${product.slug}-cover`,
+      src: product.image,
+      alt: product.imageAlt,
+    },
+    ...(product.galleryImages ?? []).map((image, index) => ({
+      id: `${product.slug}-gallery-${index + 1}`,
+      src: image.src,
+      alt: image.alt,
+    })),
+  ];
 
   const serviceSchema = {
     "@context": "https://schema.org",
@@ -115,13 +122,13 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
-                href={buildWhatsAppLink(`Hola CENOZ, quiero consultar por ${product.title.toLowerCase()}.`)}
+                href={buildWhatsAppLink(`Hola CENOZ, quiero solicitar presupuesto por ${product.title.toLowerCase()}.`)}
                 target="_blank"
                 rel="noreferrer"
                 className={cn(buttonStyles.whatsapp, "w-full justify-center sm:w-auto")}
               >
                 <WhatsAppLogo className="h-4 w-4" />
-                Consultar por WhatsApp
+                Solicitar Presupuesto
               </a>
               <Link href="/contacto#formulario-contacto" className={cn(buttonStyles.secondary, "w-full justify-center sm:w-auto")}>
                 Completar formulario
@@ -172,6 +179,38 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
                     <li key={application}>{application}</li>
                   ))}
                 </ul>
+              </article>
+
+              <article className="panel rounded-[28px] p-6">
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--color-accent-strong)]">
+                  Especificaciones técnicas
+                </p>
+                {product.technicalSpecifications?.length ? (
+                  <ul className="mt-4 space-y-3 text-sm leading-7 text-[var(--color-muted)]">
+                    {product.technicalSpecifications.map((specification) => (
+                      <li key={specification}>{specification}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="mt-4 text-sm leading-7 text-[var(--color-muted)]">
+                    Información técnica pendiente de validación comercial.
+                  </p>
+                )}
+              </article>
+
+              <article className="panel rounded-[28px] p-6">
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--color-accent-strong)]">
+                  Disponibilidad
+                </p>
+                {product.availability ? (
+                  <p className="mt-4 inline-flex rounded-full bg-[var(--color-accent-soft)] px-4 py-2 text-sm font-semibold text-[var(--color-accent-strong)]">
+                    {product.availability}
+                  </p>
+                ) : (
+                  <p className="mt-4 text-sm leading-7 text-[var(--color-muted)]">
+                    Disponibilidad a confirmar al momento de la consulta.
+                  </p>
+                )}
               </article>
             </div>
 

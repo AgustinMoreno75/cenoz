@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { buildMailtoLink, products } from "@/data/site";
+import { buildWhatsAppLink, products } from "@/data/site";
 import { buttonStyles } from "@/lib/theme";
 import { cn } from "@/lib/utils";
 
@@ -94,18 +94,18 @@ export function ContactForm() {
       return;
     }
 
-    const emailBody = [
-      "Hola CENOZ, quiero realizar una consulta comercial.",
-      `Razón social / Empresa: ${values.companyName}`,
-      `CUIT: ${values.cuit}`,
-      `Nombre y apellido: ${values.contactName}`,
-      `Teléfono: ${values.phone}`,
+    const whatsappMessage = [
+      "Hola CENOZ, quiero solicitar presupuesto.",
+      `Nombre: ${values.contactName}`,
+      `Empresa: ${values.companyName}`,
       `Email: ${values.email}`,
-      `Servicio de interés: ${values.service}`,
-      `Detalle: ${values.message}`,
+      `Teléfono: ${values.phone}`,
+      `CUIT: ${values.cuit}`,
+      `Producto o servicio: ${values.service}`,
+      `Mensaje: ${values.message}`,
     ];
 
-    window.location.href = buildMailtoLink("Consulta desde el sitio web", emailBody);
+    window.open(buildWhatsAppLink(whatsappMessage.join("\n")), "_blank", "noopener,noreferrer");
     setSubmitted(true);
     setValues(initialValues);
   };
@@ -250,7 +250,7 @@ export function ContactForm() {
           )}
           aria-invalid={Boolean(errors.message)}
           aria-describedby={errors.message ? "error-message" : undefined}
-          placeholder="Ej. Necesito información sobre trailers petroleros y módulos portátiles para una operación en Bahía Blanca."
+          placeholder="Ej. Necesito información sobre trailers petroleros y módulos portátiles para una operación en la República Argentina."
         />
         {errors.message ? (
           <span id="error-message" className="text-sm text-red-600">
@@ -261,17 +261,17 @@ export function ContactForm() {
 
       <div className="space-y-3">
         <button type="submit" className={cn(buttonStyles.primary, "w-full justify-center sm:w-auto")}>
-          Preparar email con la consulta
+          Solicitar Presupuesto por WhatsApp
         </button>
         <p className="text-sm leading-7 text-[var(--color-muted)]">
-          Al enviar, se abrirá tu cliente de correo con los datos de la empresa y de la consulta listos para revisar y mandar.
+          Al enviar, se abrirá WhatsApp con los datos de la empresa y de la consulta listos para revisar y enviar.
         </p>
       </div>
 
       <div aria-live="polite">
         {submitted ? (
           <div className="rounded-[22px] bg-[var(--color-accent-soft)] px-4 py-3 text-sm font-medium text-[var(--color-accent-strong)]">
-            Preparamos el email con los datos cargados. Si querés, podés ajustar el mensaje antes de enviarlo.
+            Preparamos el mensaje de WhatsApp con los datos cargados. Si querés, podés ajustarlo antes de enviarlo.
           </div>
         ) : null}
       </div>

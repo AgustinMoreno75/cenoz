@@ -13,9 +13,9 @@ import { buttonStyles } from "@/lib/theme";
 export const metadata = createPageMetadata({
   title: "Productos",
   description:
-    "Catálogo actual de CENOZ con módulos portátiles, baños químicos y equipos atmosféricos para empresas, obras y operaciones.",
+    "Catálogo actual de CENOZ con módulos portátiles, baños químicos, equipos atmosféricos y productos a medida para empresas, obras y operaciones.",
   path: "/productos",
-  keywords: ["productos CENOZ", "trailers petroleros", "módulos portátiles", "Bahía Blanca"],
+  keywords: ["productos CENOZ", "trailers petroleros", "módulos portátiles", "República Argentina"],
 });
 
 const itemListSchema = {
@@ -38,11 +38,12 @@ export default function ProductsPage() {
       <PageHero
         eyebrow="Productos"
         title="Todos los productos y servicios visibles en una sola visita"
-        description="Catálogo actual de CENOZ con foco en módulos portátiles, baños químicos y equipos atmosféricos, sin publicar precios y con consulta directa." 
+        description="Catálogo actual de CENOZ con foco en módulos portátiles, baños químicos, equipos atmosféricos y productos a medida, sin publicar precios y con consulta directa." 
         highlights={[
-          "Módulos portátiles",
-          "Baños químicos",
+          "Módulos Portátiles",
+          "Baños Químicos",
           "Equipos atmosféricos",
+          "Productos a medida",
         ]}
       />
 
@@ -51,8 +52,8 @@ export default function ProductsPage() {
           <Reveal className="max-w-3xl space-y-4">
             <p className="text-base leading-8 text-[var(--color-muted)] sm:text-lg">
               La oferta actual se ve completa en una sola navegación. El orden del catálogo
-              prioriza módulos portátiles, seguido por baños químicos y equipos atmosféricos,
-              que hoy son las líneas clave para la nueva etapa comercial.
+              organiza módulos portátiles, baños químicos, equipos atmosféricos y
+              proyectos especiales o productos a medida como líneas activas de CENOZ.
             </p>
           </Reveal>
 
@@ -68,11 +69,11 @@ export default function ProductsPage() {
                 ¿Querés que te indiquemos la opción más conveniente?
               </p>
               <h2 className="text-balance text-3xl font-semibold tracking-tight text-slate-950">
-                Te orientamos según tipo de empresa, obra o necesidad operativa.
+                Te orientamos según tipo de empresa, obra o necesidad operativa
               </h2>
               <p className="text-base leading-8 text-[var(--color-muted)]">
                 Si estás comparando alternativas o necesitás combinar módulos, baños y apoyo
-                operativo, respondemos con una propuesta clara por el canal que te resulte más cómodo.
+                operativo, respondemos con una orientación clara por el canal que te resulte más cómodo.
               </p>
             </div>
 

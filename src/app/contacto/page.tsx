@@ -23,7 +23,7 @@ export const metadata = createPageMetadata({
   description:
     "Contacto comercial de CENOZ para módulos portátiles, baños químicos y equipos atmosféricos con WhatsApp, formulario web, email y teléfono.",
   path: "/contacto",
-  keywords: ["contacto CENOZ", "trailers petroleros", "módulos portátiles", "Bahía Blanca"],
+  keywords: ["contacto CENOZ", "trailers petroleros", "módulos portátiles", "República Argentina"],
 });
 
 const customerProfile = "Empresas • Constructoras • Municipios • Eventos";
@@ -73,7 +73,7 @@ const contactCards = [
   },
   {
     title: "Dirección",
-    description: "Base administrativa y comercial con ubicación real en Bahía Blanca.",
+    description: "Base administrativa y comercial en Bahía Blanca con cobertura en todo el país.",
     value: siteConfig.addressLine,
     href: buildMapsLink(),
     icon: Building2,
@@ -90,7 +90,7 @@ const contactCards = [
 const responseSteps = [
   "Indicá la empresa, el CUIT y la persona que consulta.",
   "Contanos qué producto te interesa y en qué contexto lo necesitás.",
-  "Respondemos por el canal más conveniente con una propuesta directa.",
+  "Respondemos por el canal más conveniente para avanzar con tu solicitud de presupuesto.",
 ];
 
 export default function ContactPage() {

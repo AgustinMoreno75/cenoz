@@ -66,7 +66,7 @@ export default function OpenGraphImage() {
             </div>
             <div style={{ fontSize: 30, lineHeight: 1.4, color: "rgba(255,255,255,0.78)" }}>
               Soluciones para empresas, obras, municipios y operaciones con atención
-              directa desde Bahía Blanca.
+              directa desde Bahía Blanca a toda la República Argentina.
             </div>
           </div>
 
