@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+export const dynamic = "force-static";
+
 import { siteConfig } from "@/data/site";
 
 export default function manifest(): MetadataRoute.Manifest {

@@ -49,7 +49,7 @@ export type FAQItem = {
 
 export const siteConfig = {
   name: "CENOZ",
-  brandLabel: "Soluciones modulares, sanitarias y operativas",
+  brandLabel: "MÓDULOS PORTÁTILES, BAÑOS QUÍMICOS Y EQUIPOS ATMOSFÉRICOS",
   defaultTitle: "CENOZ | Módulos portátiles, baños químicos y equipos atmosféricos",
   description:
     "Soluciones modulares industriales desde Bahía Blanca a toda la República Argentina, con venta y alquiler de módulos portátiles, baños químicos y equipos atmosféricos.",
@@ -182,6 +182,24 @@ export const products: Product[] = [
       "Trailers petroleros de 12 mts desde Bahía Blanca a toda la República Argentina para operaciones petroleras, industriales y de apoyo en campo.",
     image: "/images/trailer-petrolero-1.jpg",
     imageAlt: "Trailer petrolero industrial sobre ruta",
+    galleryImages: [
+      {
+        src: "/images/trailer-petrolero-paneles-detalle-1.jpg",
+        alt: "Detalle del sistema inferior de apoyo y traslado de un trailer petrolero de paneles",
+      },
+      {
+        src: "/images/trailer-petrolero-paneles-interior.jpg",
+        alt: "Interior de un trailer petrolero de paneles con revestimiento blanco y ventanas laterales",
+      },
+      {
+        src: "/images/trailer-petrolero-paneles-traslado-1.jpg",
+        alt: "Trailer petrolero de paneles de gran porte en traslado sobre la calle",
+      },
+      {
+        src: "/images/trailer-petrolero-paneles-traslado-2.jpg",
+        alt: "Trailer petrolero de paneles siendo maniobrado con autoelevador en la vía pública",
+      },
+    ],
     features: [
       "Formato de 12 mts.",
       "Pensados para apoyo petrolero y operación en campo.",
@@ -206,6 +224,16 @@ export const products: Product[] = [
       "Trailer petrolero tradicional de 12 mts desde Bahía Blanca a toda la República Argentina para operaciones petroleras, industriales y de apoyo en campo.",
     image: "/images/trailer-petrolero-tradicional.jpg",
     imageAlt: "Trailer petrolero tradicional blanco en traslado dentro de un predio operativo",
+    galleryImages: [
+      {
+        src: "/images/trailer-petrolero-tradicional-exterior.jpg",
+        alt: "Trailer petrolero tradicional blanco visto de lateral en un predio",
+      },
+      {
+        src: "/images/trailer-petrolero-tradicional-interior.jpg",
+        alt: "Interior de trailer petrolero tradicional con revestimiento claro y piso de madera",
+      },
+    ],
     features: [
       "Formato de 12 mts.",
       "Pensados para apoyo petrolero y operación en campo.",
@@ -218,27 +246,49 @@ export const products: Product[] = [
     ],
   },
   {
-    slug: "modulos-portatiles-habitacionales",
-    title: "Módulos portátiles habitacionales (6 mts)",
-    badge: "Producto destacado",
+    slug: "trailer-petrolero-tradicional-2",
+    title: "Modulo Portatil Paneles (6m)",
+    badge: "Módulos portátiles",
     category: "modulos",
     shortDescription:
-      "Módulos de 6 mts para permanencia, descanso y apoyo diario en obra.",
+      "Unidades de 12 mts para apoyo petrolero, logística y operación en campo.",
     description:
-      "La línea que CENOZ quiere destacar: módulos habitacionales de 6 mts pensados para empresas y obras que necesitan resolver rápido, claro y sin fricción.",
+      "Solución móvil orientada a empresas que necesitan soporte petrolero, presencia operativa y una estructura lista para responder en obra o campo.",
     seoDescription:
-      "Módulos portátiles habitacionales de 6 mts desde Bahía Blanca a toda la República Argentina para obras, empresas y bases operativas.",
-    image: "/images/modulo-portatil.jpg",
-    imageAlt: "Módulos portátiles habitacionales y oficinas de obra en contenedores",
+      "Trailer petrolero tradicional de 12 mts desde Bahía Blanca a toda la República Argentina para operaciones petroleras, industriales y de apoyo en campo.",
+    image: "/images/moduloPanel6.jpeg",
+    imageAlt: "Modulo portatil de paneles de 6 metros blanco con ventanas laterales",
+    galleryImages: [
+      {
+        src: "/images/modulo-paneles-6m-galeria.jpg",
+        alt: "Modulo portatil de paneles de 6 metros blanco visto de frente en un galpón",
+      },
+      {
+        src: "/images/modulo-paneles-6m-galeria-2.jpg",
+        alt: "Modulo portatil de paneles de 6 metros blanco visto en perspectiva exterior",
+      },
+      {
+        src: "/images/modulo-paneles-6m-galeria-3.jpg",
+        alt: "Interior de modulo portatil de paneles de 6 metros con piso de madera y paredes claras",
+      },
+      {
+        src: "/images/modulo-paneles-6m-galeria-4.jpg",
+        alt: "Interior de modulo portatil de paneles de 6 metros acondicionado como oficina",
+      },
+      {
+        src: "/images/modulo-paneles-6m-galeria-5.jpg",
+        alt: "Modulo portatil de paneles de 6 metros blanco exhibido en campo abierto",
+      },
+    ],
     features: [
-      "Formato habitacional de 6 mts.",
-      "Pensados para permanencia de personal y apoyo en infraestructura.",
-      "Alta demanda en obras y proyectos de empresas.",
+      "Formato de 12 mts.",
+      "Pensados para apoyo petrolero y operación en campo.",
+      "Consulta según disponibilidad y necesidad del proyecto.",
     ],
     applications: [
-      "Obras de infraestructura.",
-      "Bases operativas temporales.",
-      "Empresas que necesitan resolver alojamiento o apoyo rápido.",
+      "Operaciones petroleras y energéticas.",
+      "Apoyo logístico en frentes de trabajo.",
+      "Empresas con necesidades móviles de soporte técnico.",
     ],
   },
   {
@@ -254,6 +304,156 @@ export const products: Product[] = [
       "Módulos habitacionales tradicionales de 6 mts desde Bahía Blanca a toda la República Argentina para obras, empresas y bases operativas.",
     image: "/images/ModuloHabitacionalTradicional.jpg",
     imageAlt: "Módulo habitacional tradicional blanco en un predio operativo",
+    galleryImages: [
+      {
+        src: "/images/modulo-habitacional-tradicional-galeria-1.jpg",
+        alt: "Módulo habitacional tradicional blanco con detalles verdes visto en perspectiva exterior",
+      },
+      {
+        src: "/images/modulo-habitacional-tradicional-galeria-2.jpg",
+        alt: "Módulo habitacional tradicional blanco con puerta lateral y ventanas abatibles",
+      },
+      {
+        src: "/images/modulo-habitacional-tradicional-galeria-3.jpg",
+        alt: "Dos módulos habitacionales tradicionales blancos exhibidos en un predio",
+      },
+      {
+        src: "/images/modulo-habitacional-tradicional-galeria-4.jpg",
+        alt: "Interior de módulo habitacional tradicional acondicionado como sala de reuniones",
+      },
+      {
+        src: "/images/modulo-habitacional-tradicional-galeria-5.jpg",
+        alt: "Interior de módulo habitacional tradicional equipado como oficina con escritorios",
+      },
+      {
+        src: "/images/modulo-habitacional-tradicional-galeria-6.jpg",
+        alt: "Interior vacío de módulo habitacional tradicional con piso de madera",
+      },
+      {
+        src: "/images/modulo-habitacional-tradicional-galeria-7.jpg",
+        alt: "Interior de módulo habitacional tradicional montado como oficina operativa",
+      },
+      {
+        src: "/images/modulo-habitacional-tradicional-galeria-8.jpg",
+        alt: "Interior de módulo habitacional tradicional con cama cucheta",
+      },
+    ],
+    features: [
+      "Formato habitacional de 6 mts.",
+      "Pensados para permanencia de personal y apoyo en infraestructura.",
+      "Alta demanda en obras y proyectos de empresas.",
+    ],
+    applications: [
+      "Obras de infraestructura.",
+      "Bases operativas temporales.",
+      "Empresas que necesitan resolver alojamiento o apoyo rápido.",
+    ],
+  },
+  {
+    slug: "modulos-portatiles-habitacionales",
+    title: "Módulos portátiles habitacionales (2.4mx2.4m)",
+    badge: "Producto destacado",
+    category: "modulos",
+    shortDescription:
+      "Módulos de 6 mts para permanencia, descanso y apoyo diario en obra.",
+    description:
+      "La línea que CENOZ quiere destacar: módulos habitacionales de 6 mts pensados para empresas y obras que necesitan resolver rápido, claro y sin fricción.",
+    seoDescription:
+      "Módulos portátiles habitacionales de 6 mts desde Bahía Blanca a toda la República Argentina para obras, empresas y bases operativas.",
+    image: "/images/modulo-portatil.jpg",
+    imageAlt: "Módulos portátiles habitacionales y oficinas de obra en contenedores",
+    galleryImages: [
+      {
+        src: "/images/modulo-portatil-habitacional-galeria-1.jpg",
+        alt: "Cabina modular portátil blanca con ventanas perimetrales exhibida en un predio",
+      },
+      {
+        src: "/images/modulo-portatil-habitacional-galeria-2.jpg",
+        alt: "Módulo portátil habitacional compacto con frente vidriado y puerta lateral",
+      },
+      {
+        src: "/images/modulo-portatil-habitacional-galeria-3.jpg",
+        alt: "Módulo portátil habitacional compacto con puerta principal y ventanas laterales",
+      },
+      {
+        src: "/images/modulo-portatil-habitacional-galeria-4.jpg",
+        alt: "Vista exterior trasera de módulo portátil habitacional blanco con amplias ventanas",
+      },
+      {
+        src: "/images/modulo-portatil-habitacional-galeria-5.jpg",
+        alt: "Dos módulos portátiles habitacionales blancos instalados sobre césped",
+      },
+      {
+        src: "/images/modulo-portatil-habitacional-galeria-6.jpg",
+        alt: "Módulos portátiles habitacionales utilizados como posta sanitizante",
+      },
+      {
+        src: "/images/modulo-portatil-habitacional-galeria-7.jpg",
+        alt: "Cabina modular portátil vidriada instalada en un predio operativo",
+      },
+      {
+        src: "/images/modulo-portatil-habitacional-galeria-8.jpg",
+        alt: "Módulo portátil habitacional compacto blanco con puerta frontal y ventana lateral",
+      },
+    ],
+    features: [
+      "Formato habitacional de 6 mts.",
+      "Pensados para permanencia de personal y apoyo en infraestructura.",
+      "Alta demanda en obras y proyectos de empresas.",
+    ],
+    applications: [
+      "Obras de infraestructura.",
+      "Bases operativas temporales.",
+      "Empresas que necesitan resolver alojamiento o apoyo rápido.",
+    ],
+  },
+  {
+    slug: "modulos-portatiles-habitacionales-2",
+    title: "Modulo Tradicional (2.5mx2.4m)",
+    badge: "Producto destacado",
+    category: "modulos",
+    shortDescription:
+      "Módulos de 6 mts para permanencia, descanso y apoyo diario en obra.",
+    description:
+      "La línea que CENOZ quiere destacar: módulos habitacionales de 6 mts pensados para empresas y obras que necesitan resolver rápido, claro y sin fricción.",
+    seoDescription:
+      "Módulos portátiles habitacionales de 6 mts desde Bahía Blanca a toda la República Argentina para obras, empresas y bases operativas.",
+    image: "/images/moduTra2.jpeg",
+    imageAlt: "Módulos tradicionales blancos exhibidos en fila sobre césped",
+    galleryImages: [
+      {
+        src: "/images/modulo-tradicional-2-5x2-4m-galeria-1.jpg",
+        alt: "Módulo tradicional blanco de 2.5 por 2.4 metros con puerta abierta visto desde el frente",
+      },
+      {
+        src: "/images/modulo-tradicional-2-5x2-4m-galeria-2.jpg",
+        alt: "Módulo tradicional blanco de 2.5 por 2.4 metros con ventanas laterales y acceso abierto",
+      },
+      {
+        src: "/images/modulo-tradicional-2-5x2-4m-galeria-3.jpg",
+        alt: "Interior del módulo tradicional con piso símil madera, puerta interna y mueble lateral",
+      },
+      {
+        src: "/images/modulo-tradicional-2-5x2-4m-galeria-4.jpg",
+        alt: "Sector de lavatorio del módulo tradicional con mesada doble y espejos",
+      },
+      {
+        src: "/images/modulo-tradicional-2-5x2-4m-galeria-5.jpg",
+        alt: "Vista superior del sanitario interior del módulo tradicional con piso símil madera",
+      },
+      {
+        src: "/images/modulo-tradicional-2-5x2-4m-galeria-6.jpg",
+        alt: "Plato de ducha interior del módulo tradicional con grifería superior",
+      },
+      {
+        src: "/images/modulo-tradicional-2-5x2-4m-galeria-7.jpg",
+        alt: "Termotanque instalado en el interior del módulo tradicional junto a las conexiones de agua",
+      },
+      {
+        src: "/images/modulo-tradicional-2-5x2-4m-galeria-8.jpg",
+        alt: "Interior del módulo tradicional con mingitorio, inodoro y llaves de paso visibles",
+      },
+    ],
     features: [
       "Formato habitacional de 6 mts.",
       "Pensados para permanencia de personal y apoyo en infraestructura.",
@@ -278,6 +478,24 @@ export const products: Product[] = [
       "Módulos con kit rodante de 6 mts desde Bahía Blanca a toda la República Argentina para obras, empresas y bases operativas con traslado práctico.",
     image: "/images/modulo-rodante.jpg",
     imageAlt: "Módulos blancos con kit rodante en un predio operativo",
+    galleryImages: [
+      {
+        src: "/images/modulo-kit-rodante-galeria-1.jpg",
+        alt: "Fila de módulos blancos con kit rodante alineados en un predio operativo",
+      },
+      {
+        src: "/images/modulo-kit-rodante-galeria-2.jpg",
+        alt: "Módulos con kit rodante estacionados en línea dentro de un predio abierto",
+      },
+      {
+        src: "/images/modulo-kit-rodante-galeria-3.jpg",
+        alt: "Módulos con kit rodante instalados como apoyo sanitario en un operativo de campo",
+      },
+      {
+        src: "/images/modulo-kit-rodante-galeria-4.jpg",
+        alt: "Otra vista de módulos con kit rodante utilizados en un operativo de apoyo sanitario",
+      },
+    ],
     features: [
       "Formato habitacional de 6 mts con kit rodante.",
       "Pensados para permanencia de personal y apoyo en infraestructura.",

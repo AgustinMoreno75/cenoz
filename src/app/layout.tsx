@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+// import { Analytics } from "@vercel/analytics/next";
+// import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { ContactFloat } from "@/components/layout/contact-float";
 import { SiteFooter } from "@/components/layout/site-footer";
@@ -31,8 +31,8 @@ export default function RootLayout({
           <SiteFooter />
         </div>
         <ContactFloat />
-        <Analytics />
-        <SpeedInsights />
+        {/* <Analytics /> */}
+        {/* <SpeedInsights /> */}
       </body>
     </html>
   );

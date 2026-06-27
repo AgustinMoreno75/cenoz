@@ -110,7 +110,7 @@ export default function Home() {
           <Reveal className="max-w-3xl space-y-8">
             <div className="space-y-5 text-center sm:text-left">
               <span className="inline-flex rounded-full border border-slate-900/10 bg-white/82 px-4 py-2 text-sm font-medium text-slate-700 backdrop-blur-sm">
-                Más de 30 años • Bahía Blanca • toda la República Argentina
+                ALQUILER - VENTA - SERVICIOS
               </span>
               <h1 className="hidden text-balance text-4xl font-semibold tracking-tight text-slate-950 sm:block sm:text-5xl lg:text-6xl">
                 Cenoz
