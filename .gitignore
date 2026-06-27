@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local large media excluded from GitHub pushes
+assets/moduvideo.mp4
+public/videos/modulo-tradicional-2-5x2-4m.mp4

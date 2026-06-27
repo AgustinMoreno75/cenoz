@@ -13,6 +13,8 @@ type ProductGalleryImage = {
   id: string;
   src: string;
   alt: string;
+  type?: "image" | "video";
+  poster?: string;
 };
 
 type ProductGalleryProps = {
@@ -67,6 +69,8 @@ export function ProductGallery({ title, images }: ProductGalleryProps) {
   const hasOverflow = images.length > MAX_PREVIEW_IMAGES;
   const overflowCount = images.length - MAX_PREVIEW_IMAGES;
   const overflowPreviewIndex = MAX_PREVIEW_IMAGES - 1;
+  const activeMediaType = activeImage.type ?? "image";
+  const activePreviewSrc = activeMediaType === "video" ? activeImage.poster ?? activeImage.src : activeImage.src;
 
   const openLightboxAt = (index: number) => {
     setActiveIndex(index);
@@ -119,19 +123,30 @@ export function ProductGallery({ title, images }: ProductGalleryProps) {
         <button
           type="button"
           onClick={() => setIsLightboxOpen(true)}
-          aria-label={`Abrir galeria completa de ${title}`}
+          aria-label={
+            activeMediaType === "video"
+              ? `Reproducir video de ${title} en pantalla completa`
+              : `Abrir galeria completa de ${title}`
+          }
           className="group relative aspect-[4/3] overflow-hidden rounded-[26px] bg-slate-100 text-left"
         >
           <Image
             key={activeImage.id}
-            src={activeImage.src}
+            src={activePreviewSrc}
             alt={activeImage.alt}
             fill
             className="object-cover transition duration-300 group-hover:scale-[1.01]"
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 70vw, 40vw"
           />
+          {activeMediaType === "video" ? (
+            <span className="pointer-events-none absolute inset-0 flex items-center justify-center">
+              <span className="rounded-full bg-slate-950/78 px-5 py-3 text-sm font-semibold text-white backdrop-blur-sm">
+                Reproducir video
+              </span>
+            </span>
+          ) : null}
           <span className="pointer-events-none absolute bottom-4 left-4 rounded-full bg-slate-950/78 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
-            Ver en pantalla completa
+            {activeMediaType === "video" ? "Abrir y reproducir" : "Ver en pantalla completa"}
           </span>
         </button>
 
@@ -147,6 +162,11 @@ export function ProductGallery({ title, images }: ProductGalleryProps) {
                 key={image.id}
                 type="button"
                 onClick={() => {
+                  if (image.type === "video") {
+                    openLightboxAt(index);
+                    return;
+                  }
+
                   if (isOverflowPreview) {
                     openLightboxAt(index);
                     return;
@@ -169,7 +189,7 @@ export function ProductGallery({ title, images }: ProductGalleryProps) {
               >
                 <div className="relative aspect-square overflow-hidden rounded-[16px] bg-slate-100">
                   <Image
-                    src={image.src}
+                    src={image.type === "video" ? image.poster ?? image.src : image.src}
                     alt={image.alt}
                     fill
                     className={cn(
@@ -178,6 +198,14 @@ export function ProductGallery({ title, images }: ProductGalleryProps) {
                     )}
                     sizes="112px"
                   />
+
+                  {image.type === "video" && !isOverflowPreview ? (
+                    <div className="absolute inset-0 flex items-center justify-center bg-slate-950/20">
+                      <span className="rounded-full bg-slate-950/78 px-3 py-1 text-[11px] font-semibold text-white backdrop-blur-sm">
+                        Video
+                      </span>
+                    </div>
+                  ) : null}
 
                   {isOverflowPreview ? (
                     <div className="absolute inset-0 flex items-center justify-center bg-slate-950/42">
@@ -221,15 +249,31 @@ export function ProductGallery({ title, images }: ProductGalleryProps) {
               onTouchStart={handleTouchStart}
               onTouchEnd={handleTouchEnd}
             >
-              <Image
-                key={`${activeImage.id}-lightbox`}
-                src={activeImage.src}
-                alt={activeImage.alt}
-                fill
-                priority
-                className="object-contain p-4 sm:p-8"
-                sizes="100vw"
-              />
+              {activeMediaType === "video" ? (
+                <video
+                  key={`${activeImage.id}-lightbox-video`}
+                  src={activeImage.src}
+                  poster={activeImage.poster}
+                  className="h-full w-full object-contain p-4 sm:p-8"
+                  autoPlay
+                  muted
+                  controls
+                  playsInline
+                  preload="metadata"
+                >
+                  Tu navegador no admite la reproducción de video.
+                </video>
+              ) : (
+                <Image
+                  key={`${activeImage.id}-lightbox`}
+                  src={activeImage.src}
+                  alt={activeImage.alt}
+                  fill
+                  priority
+                  className="object-contain p-4 sm:p-8"
+                  sizes="100vw"
+                />
+              )}
 
               {images.length > 1 ? (
                 <>

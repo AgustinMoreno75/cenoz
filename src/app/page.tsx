@@ -84,7 +84,7 @@ const faqSchema = {
 };
 
 const homeProducts = products.filter(
-  (product) => !["banos-quimicos", "cabinas-de-vigilancia"].includes(product.slug),
+  (product) => !["banos-quimicos", "cabinas-de-vigilancia", "panoles"].includes(product.slug),
 );
 
 export default function Home() {

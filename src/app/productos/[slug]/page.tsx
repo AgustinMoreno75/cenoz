@@ -69,11 +69,14 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
       id: `${product.slug}-cover`,
       src: product.image,
       alt: product.imageAlt,
+      type: "image" as const,
     },
     ...(product.galleryImages ?? []).map((image, index) => ({
       id: `${product.slug}-gallery-${index + 1}`,
       src: image.src,
       alt: image.alt,
+      type: image.type ?? "image",
+      poster: image.poster,
     })),
   ];
 
