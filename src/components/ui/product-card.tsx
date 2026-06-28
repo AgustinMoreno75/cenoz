@@ -35,10 +35,7 @@ export function ProductCard({ product, variant = "default" }: ProductCardProps) 
             sizes="(max-width: 1280px) 100vw, 33vw"
           />
 
-          <div className="absolute inset-x-0 top-0 flex items-start justify-between gap-3 p-4">
-            <span className="rounded-full bg-white/92 px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-sm">
-              {product.badge}
-            </span>
+          <div className="absolute inset-x-0 top-0 flex justify-end p-4">
             <span className="inline-flex rounded-2xl bg-slate-950/90 p-3 text-white shadow-sm">
               <Icon className="h-5 w-5" />
             </span>

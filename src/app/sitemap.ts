@@ -4,7 +4,7 @@ import { products, siteConfig } from "@/data/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
-  const routes: MetadataRoute.Sitemap = ["/", "/productos", "/deposito-con-stock", "/nosotros", "/contacto"].map(
+  const routes: MetadataRoute.Sitemap = ["/", "/productos", "/depositos-con-stock", "/nosotros", "/contacto"].map(
     (route) => ({
       url: `${siteConfig.siteUrl}${route}`,
       lastModified,

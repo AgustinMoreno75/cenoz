@@ -115,7 +115,7 @@ export const siteConfig = {
 export const navigation: NavigationItem[] = [
   { href: "/", label: "Inicio" },
   { href: "/productos", label: "Productos" },
-  { href: "/deposito-con-stock", label: "Depósito con Stock" },
+  { href: "/depositos-con-stock", label: "Depósitos con Stock" },
   { href: "/nosotros", label: "Nosotros" },
   { href: "/contacto", label: "Contacto" },
 ];
@@ -123,15 +123,15 @@ export const navigation: NavigationItem[] = [
 export const heroStats = [
   {
     value: "Soluciones",
-    label: "catálogo real para módulos portátiles, baños químicos y equipos atmosféricos",
+    label: "catálogo real para módulos portátiles, baños químicos y equipos atmosféricos. Con Stock permanente y entrega inmediata las 24 HS los 365 DÍAS DEL AÑO",
   },
   {
     value: "Conveniencia",
-    label: "consultas por WhatsApp, formulario web, email y llamada telefónica",
+    label: "Agilidad en la respuesta para consultas por llamada telefónica, WhatsApp, email y formulario web",
   },
   {
     value: "Experiencia",
-    label: "respuesta para empresas, obras, municipios y operaciones reales",
+    label: "Desde mas de 35 años nos dedicamos a la Venta y Alquiler de Módulos Portátiles, Baños Químicos y Equipos Atmosféricos brindando respuestas inmediatas y eficientes a las necesidades urgentes de nuestros clientes en todo el paísDE",
   },
 ];
 
@@ -625,7 +625,7 @@ export const products: Product[] = [
       "Cabinas pensadas para control de acceso, vigilancia y presencia operativa en empresas, predios, obras y puntos de ingreso donde hace falta claridad y resguardo.",
     seoDescription:
       "Cabinas de vigilancia desde Bahía Blanca a toda la República Argentina en medidas de 1.30 a 6 mts para control de acceso y seguridad operativa.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Guard_booth_20190426_135110.jpg/1280px-Guard_booth_20190426_135110.jpg",
+    image: "/images/cabina-vigilancia-principal.jpeg",
     imageAlt: "Cabina de vigilancia en un predio industrial",
     galleryImages: [
       {
@@ -699,90 +699,6 @@ export const products: Product[] = [
 ];
 
 export const stockGalleryItems: StockGalleryItem[] = [
-  {
-    id: "stock-001",
-    src: "/images/trailer-petrolero-1.jpg",
-    alt: "Trailer petrolero de paneles listo para operación y traslado",
-    title: "Trailer petrolero de paneles",
-    line: "Stock visual",
-  },
-  {
-    id: "stock-002",
-    src: "/images/trailer-petrolero-tradicional.jpg",
-    alt: "Trailer petrolero tradicional blanco exhibido en predio operativo",
-    title: "Trailer petrolero tradicional",
-    line: "Stock visual",
-  },
-  {
-    id: "stock-003",
-    src: "/images/moduloPanel6.jpeg",
-    alt: "Módulo portátil de paneles de 6 metros en vista exterior",
-    title: "Módulo paneles 6m",
-    line: "Stock visual",
-  },
-  {
-    id: "stock-004",
-    src: "/images/ModuloHabitacionalTradicional.jpg",
-    alt: "Módulo habitacional tradicional blanco instalado en un predio",
-    title: "Módulo habitacional tradicional",
-    line: "Stock visual",
-  },
-  {
-    id: "stock-005",
-    src: "/images/modulo-portatil.jpg",
-    alt: "Módulo portátil habitacional compacto con frente vidriado",
-    title: "Módulo portátil habitacional",
-    line: "Stock visual",
-  },
-  {
-    id: "stock-006",
-    src: "/images/moduTra2.jpeg",
-    alt: "Módulo tradicional blanco exhibido en un predio abierto",
-    title: "Módulo tradicional",
-    line: "Stock visual",
-  },
-  {
-    id: "stock-007",
-    src: "/images/modulo-rodante.jpg",
-    alt: "Módulo con kit rodante preparado para traslado operativo",
-    title: "Módulo con kit rodante",
-    line: "Stock visual",
-  },
-  {
-    id: "stock-008",
-    src: "/images/banos-portatiles.jpg",
-    alt: "Baños químicos y cloacales blancos exhibidos en galpón",
-    title: "Baños químicos y cloacales",
-    line: "Stock visual",
-  },
-  {
-    id: "stock-009",
-    src: "/images/cabinas-vigilancia-galeria-2.jpeg",
-    alt: "Cabinas de vigilancia blancas alineadas en patio operativo",
-    title: "Cabinas de vigilancia",
-    line: "Stock visual",
-  },
-  {
-    id: "stock-010",
-    src: "/images/equipo-atmosferico.jpg",
-    alt: "Equipo atmosférico portátil con tanque blanco y mangueras amarillas",
-    title: "Equipos atmosféricos",
-    line: "Stock visual",
-  },
-  {
-    id: "stock-011",
-    src: "/images/panol.jpeg",
-    alt: "Pañol portátil blanco para resguardo de herramientas y materiales",
-    title: "Pañoles",
-    line: "Stock visual",
-  },
-  {
-    id: "stock-012",
-    src: "/images/proyectos-a-medida.jpg",
-    alt: "Producto fabricado a medida por CENOZ para operación industrial",
-    title: "Productos a medida",
-    line: "Stock visual",
-  },
   {
     id: "stock-013",
     src: "/images/stock-en-depositos/stock-deposito-01.jpg",

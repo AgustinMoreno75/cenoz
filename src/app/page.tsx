@@ -11,7 +11,6 @@ import {
 
 import { JsonLd } from "@/components/seo/json-ld";
 import { Container } from "@/components/ui/container";
-import { FAQList } from "@/components/ui/faq-list";
 import { ProductCard } from "@/components/ui/product-card";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -19,7 +18,6 @@ import {
   advantages,
   buildWhatsAppLink,
   companyStats,
-  faqs,
   heroStats,
   products,
   siteConfig,
@@ -70,19 +68,6 @@ const localBusinessSchema = {
   knowsAbout: siteConfig.defaultKeywords,
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((item) => ({
-    "@type": "Question",
-    name: item.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.answer,
-    },
-  })),
-};
-
 const homeProducts = products.filter(
   (product) => !["banos-quimicos", "cabinas-de-vigilancia", "panoles"].includes(product.slug),
 );
@@ -91,7 +76,6 @@ export default function Home() {
   return (
     <>
       <JsonLd data={localBusinessSchema} />
-      <JsonLd data={faqSchema} />
 
       <section id="top" data-nav-section="/" className="relative isolate overflow-hidden bg-[var(--color-surface)] text-slate-950">
         <div className="absolute inset-0 -z-20">
@@ -172,10 +156,6 @@ export default function Home() {
                   <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-accent-strong)]">
                     Canales de Contacto
                   </p>
-                  <p className="mt-2 text-sm leading-7 text-[var(--color-muted)]">
-                    Elegí el canal más conveniente para consultar, solicitar presupuesto
-                    y enviar los datos de tu empresa.
-                  </p>
                 </div>
 
                 <ul className="grid gap-3 text-sm text-slate-700 sm:grid-cols-2">
@@ -210,7 +190,7 @@ export default function Home() {
           <Container className="space-y-10">
             <SectionHeading
               eyebrow="Productos"
-              title="Todos los productos y servicios visibles en una sola visita"
+              title="Todos los productos presentados en esta pagina estan disponibles para entrega inmediata en cualquier lugar de la republica argentina"
               description="Catálogo actual ordenado para ver rápido la oferta real de CENOZ, con foco especial en módulos portátiles como línea prioritaria."
             />
 
@@ -295,14 +275,8 @@ export default function Home() {
               a necesidades urgentes de nuestros clientes en todo el país.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Link href="/#contacto" className={cn(buttonStyles.primary, "w-full justify-center sm:w-auto")}>
+              <Link href="#contacto" className={cn(buttonStyles.primary, "w-full justify-center sm:w-auto")}>
                 Contactar Empresa
-              </Link>
-              <Link
-                href="/nosotros"
-                className="inline-flex w-full items-center justify-center rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/10 sm:w-auto"
-              >
-                Conocer la empresa
               </Link>
             </div>
           </Reveal>
@@ -328,12 +302,13 @@ export default function Home() {
                     Consultas directas
                   </p>
                   <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
-                    No mostramos precios: armamos un presupuesto según tu necesidad real
+                    ARMAMOS PRESUPUESTOS ACORDES A CADA NECESIDAD
                   </h2>
                   <p className="max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-                    Las consultas más habituales llegan por alquiler de módulos y baños para
-                    obras de infraestructura. Si ya sabés qué necesitás, cotizamos directo.
-                    Si todavía estás evaluando, te ayudamos a elegir la alternativa conveniente.
+                    SI LA CONSULTA ES PUNTUAL, COTIZAMOS DIRECTAMENTE POR CUALQUIERA DE NUESTROS
+                    CANALES DE CONTACTO. SI ES UN PROYECTO EN EVALUACION, AYUDAMOS A ELEGIR LA
+                    PROPUESTA MAS CONVENIENTE COORDINANDO VISITAS EN NUESTROS DEPOSITOS PARA LA
+                    ELECCION PERSONALIZADA DE LOS PRODUCTOS NECESARIOS PARA PODER CONCRETAR LA OBRA.
                   </p>
                 </div>
 
@@ -352,19 +327,6 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-            </Reveal>
-          </Container>
-        </section>
-
-        <section className="border-t border-[color:var(--color-line)] py-20 sm:py-24">
-          <Container className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-            <SectionHeading
-              eyebrow="Consultas frecuentes"
-              title="Lo que más preguntan antes de avanzar con una cotización"
-              description="Preguntas habituales sobre productos, clientes, canales de contacto y forma de cotizar." 
-            />
-            <Reveal delay={0.08}>
-              <FAQList items={faqs} />
             </Reveal>
           </Container>
         </section>

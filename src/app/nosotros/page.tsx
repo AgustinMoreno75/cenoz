@@ -7,7 +7,6 @@ import { Reveal } from "@/components/ui/reveal";
 import { WhatsAppLogo } from "@/components/ui/whatsapp-logo";
 import {
   buildWhatsAppLink,
-  companyStats,
   siteConfig,
   workflowSteps,
 } from "@/data/site";
@@ -74,37 +73,17 @@ export default function AboutPage() {
           <Reveal className="space-y-6">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[var(--color-steel)]">
-                Misión
+                QUIENES SOMOS
               </p>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
-                Acompañar a empresas y obras con soluciones concretas y consulta directa.
+                Una empresa enfocada en resolver con criterio comercial y respuesta directa A CADA UNO DE NUESTROS CLIENTES EN CUALQUIER LUGAR DEL PAIS.
               </h2>
             </div>
 
             <div className="space-y-4 text-base leading-8 text-[var(--color-muted)]">
               <p>
-                CENOZ ofrece trailers petroleros, módulos portátiles habitacionales,
-                pañoles y obradores, cabinas de vigilancia, baños químicos y equipos
-                atmosféricos para clientes que necesitan una respuesta clara y concreta.
+                Desde hace más de 35 años CENOZ SE DEDICA a la Venta y Alquiler de Módulos Portátiles, Baños Químicos y Equipos Atmosféricos brindando soluciones inmediatas a necesidades urgentes de nuestros clientes en todo el país.
               </p>
-              <p>
-                La nueva etapa digital busca mostrar mejor esa realidad: una empresa con
-                foco comercial, canales de contacto directos y una oferta completa visible
-                en una sola visita.
-              </p>
-            </div>
-
-            <div className="grid gap-4 sm:grid-cols-3">
-              {companyStats.map((item) => (
-                <div key={item.label} className="rounded-[24px] bg-[var(--color-surface)] p-5">
-                  <p className="text-3xl font-semibold tracking-tight text-slate-950">
-                    {item.value}
-                  </p>
-                  <p className="mt-2 text-sm leading-7 text-[var(--color-muted)]">
-                    {item.label}
-                  </p>
-                </div>
-              ))}
             </div>
           </Reveal>
         </Container>
