@@ -37,8 +37,8 @@ export default function ProductsPage() {
 
       <PageHero
         eyebrow="Productos"
-        title="Todos los productos presentados en esta pagina estan disponibles para entrega inmediata en cualquier lugar de la republica argentina"
-        description="Catálogo actual de CENOZ con foco en módulos portátiles, baños químicos, equipos atmosféricos y productos a medida, sin publicar precios y con consulta directa." 
+        title="Todos los productos presentados en esta pagina estan disponibles para entrega inmediata en cualquier lugar de la República Argentina"
+        description="" 
         highlights={[
           "Módulos Portátiles",
           "Baños Químicos",

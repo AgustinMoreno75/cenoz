@@ -1,13 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Boxes,
-  Clock3,
-  MapPin,
-  MessageSquare,
-  ShieldCheck,
-  Truck,
-} from "lucide-react";
 
 import { JsonLd } from "@/components/seo/json-ld";
 import { Container } from "@/components/ui/container";
@@ -15,7 +7,6 @@ import { ProductCard } from "@/components/ui/product-card";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import {
-  advantages,
   buildWhatsAppLink,
   companyStats,
   heroStats,
@@ -25,15 +16,6 @@ import {
 import { WhatsAppLogo } from "@/components/ui/whatsapp-logo";
 import { buttonStyles } from "@/lib/theme";
 import { cn } from "@/lib/utils";
-
-const advantageIcons = {
-  solutions: Boxes,
-  speed: Clock3,
-  delivery: Truck,
-  trust: ShieldCheck,
-  service: MessageSquare,
-  coverage: MapPin,
-};
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
@@ -190,7 +172,7 @@ export default function Home() {
           <Container className="space-y-10">
             <SectionHeading
               eyebrow="Productos"
-              title="Todos los productos presentados en esta pagina estan disponibles para entrega inmediata en cualquier lugar de la republica argentina"
+              title="Todos los productos presentados en esta pagina estan disponibles para entrega inmediata en cualquier lugar de la República Argentina"
               description="Catálogo actual ordenado para ver rápido la oferta real de CENOZ, con foco especial en módulos portátiles como línea prioritaria."
             />
 
@@ -234,28 +216,6 @@ export default function Home() {
               title="BRINDAMOS SOLUCIONES en MODULOS PORTATILES de CALIDAD para la industria."
               description="EXPERIENCIA y CONVENIENCIA avaladas por la CONFORMIDAD y ELECCION de nuestros clientes, por la PRESENCIA, SERIEDAD y CONTINUIDAD en el mercado y por la AGILIDAD en la respuesta y resolución eficaz con ENTREGA INMEDIATA en cualquier lugar del país."
             />
-
-            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-              {advantages.map((item, index) => {
-                const Icon = advantageIcons[item.icon];
-
-                return (
-                  <Reveal key={item.title} delay={index * 0.06}>
-                    <article className="panel h-full rounded-[28px] p-6">
-                      <div className="inline-flex rounded-2xl bg-[var(--color-accent-soft)] p-3 text-[var(--color-accent-strong)]">
-                        <Icon className="h-6 w-6" />
-                      </div>
-                      <h3 className="mt-5 text-xl font-semibold tracking-tight text-slate-950">
-                        {item.title}
-                      </h3>
-                      <p className="mt-3 text-sm leading-7 text-[var(--color-muted)]">
-                        {item.description}
-                      </p>
-                    </article>
-                  </Reveal>
-                );
-              })}
-            </div>
           </Container>
         </section>
       </div>

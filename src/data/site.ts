@@ -131,7 +131,7 @@ export const heroStats = [
   },
   {
     value: "Experiencia",
-    label: "Desde mas de 35 años nos dedicamos a la Venta y Alquiler de Módulos Portátiles, Baños Químicos y Equipos Atmosféricos brindando respuestas inmediatas y eficientes a las necesidades urgentes de nuestros clientes en todo el paísDE",
+    label: "Desde mas de 35 años nos dedicamos a la Venta y Alquiler de Módulos Portátiles, Baños Químicos y Equipos Atmosféricos brindando respuestas inmediatas y eficientes a las necesidades urgentes de nuestros clientes en todo el país",
   },
 ];
 
@@ -182,7 +182,7 @@ export const advantages = [
 export const products: Product[] = [
   {
     slug: "trailers-petroleros-12-mts",
-    title: "Trailers petroleros de paneles",
+    title: "Trailers petroleros 12 mts de paneles",
     badge: "Módulos portátiles",
     category: "modulos",
     shortDescription:
@@ -224,7 +224,7 @@ export const products: Product[] = [
   },
   {
     slug: "trailer-petrolero-tradicional",
-    title: "Trailer petrolero tradicional",
+    title: "Trailer petrolero 12 mts tradicional",
     badge: "Módulos portátiles",
     category: "modulos",
     shortDescription:
@@ -258,7 +258,7 @@ export const products: Product[] = [
   },
   {
     slug: "trailer-petrolero-tradicional-2",
-    title: "Modulo Portatil Paneles (6m)",
+    title: "Modulos Portatiles 6 mts de Paneles",
     badge: "Módulos portátiles",
     category: "modulos",
     shortDescription:
@@ -304,7 +304,7 @@ export const products: Product[] = [
   },
   {
     slug: "modulos-habitacionales-tradicional",
-    title: "Módulos habitacionales (Tradicional)",
+    title: "Módulos Habitacionales de 6 mts modelo Tradicional",
     badge: "Producto destacado",
     category: "modulos",
     shortDescription:
@@ -362,7 +362,7 @@ export const products: Product[] = [
   },
   {
     slug: "modulos-portatiles-habitacionales",
-    title: "Módulos portátiles habitacionales (2.4mx2.4m)",
+    title: "Módulos Habitacionales 2.40 mts de Paneles",
     badge: "Producto destacado",
     category: "modulos",
     shortDescription:
@@ -420,7 +420,7 @@ export const products: Product[] = [
   },
   {
     slug: "modulos-portatiles-habitacionales-2",
-    title: "Modulo Tradicional (2.5mx2.4m)",
+    title: "Modulos Habitacionales 2.40 y 2.50 mts modelo Tradicional",
     badge: "Producto destacado",
     category: "modulos",
     shortDescription:
